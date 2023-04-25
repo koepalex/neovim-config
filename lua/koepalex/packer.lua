@@ -38,25 +38,6 @@ return require('packer').startup(function(use)
 	  {'hrsh7th/cmp-nvim-lsp'}, -- Required
 	  {'L3MON4D3/LuaSnip'},     -- Required
      },
-     config = function()
-         local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
-         local on_attach = require'config.on_attach'
-         require('nvim-lsp-installer').on_server_ready(
-         function(server)
-             local config = {
-                 on_attach = on_attach[server.name],
-                 capabilities = capabilities,
-                 autostart = true,
-                 settings = {
-                     Lua = {
-                         diagnostics = { globals = {'vim'} }
-                     }
-                 }
-             }
-             server:setup(config)
-         end
-         )
-     end
    }
    -- install without yarn or npm
    use({
@@ -64,5 +45,5 @@ return require('packer').startup(function(use)
        run = function() vim.fn["mkdp#util#install"]() end,
    })
 
-   use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+   use({ "chrisbra/unicode.vim"})
 end)
