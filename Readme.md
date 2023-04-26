@@ -1,6 +1,10 @@
 # neovim config
 
-This repository is for learning to configure neovim. The goal is to have and configuration with Language Server Protocol, debugging capabilities, test runner and spellchecker for `dotnet`, `golang` and `rust`. 
+This repository is for learning to configure neovim. I would like to have an usable neovim configuration, that I can
+benchmark myself agains graphical editors like VsCode. The main driver to look into neovim was the need to extend the 
+editor by my own. As target state I would like to have neovim with Language Server Protocol support, debugging- and 
+refactoring-capabilities, test-runner as well as spellchecker. For my major programming languages (`dotnet`, `go` and 
+`rust`). 
 
 ## Structure
 
@@ -25,6 +29,27 @@ This repository is for learning to configure neovim. The goal is to have and con
 * Leader key (referenced as \<leader> is mapped to `space`
 * After changing a config file, it need to be sourced (`:so`) or neovim restarted
 ftero
+
+# Commands
+
+| Command | Name | Usage |
+|---|---|---|
+| \<leader>pv  | Project Navigation | Browse the files within the folder|
+| \<leader>pf  | Project Files | Find files by name within the folder |
+| \<leader>gf  | Git Files | Find files by name that are checked in in git |
+| \<leader>ps  | Project Search | Find in files |
+| \<leader>git | git | Open git integration |
+| \<leader>f | Formatting | Format the current file | 
+| K | Show doscu | Hover Documentation of method |
+| F2 | Rename | Rename the symbole under the cursor | 
+| \<leader>fr | Find References | Find all references of the symbol under the cursor | 
+| >e | Next Error | Go to next error |
+| <e | Previous Error | Go to previous error | 
+| \<leader>a | Code Action | Open code actions menu |
+| \<leader>vd | Workspace Symbol | Find workspace symbol |
+| :Mason | Install Language | Add new language server protocol |
+| :MarkdownPreview | Markdown Preview | Show preview from markdown in browser. |
+| :UnicodeSearch! _name_ | Find Unicode | Find unicode char and add to file | 
 
 # Acknowledgement
 
