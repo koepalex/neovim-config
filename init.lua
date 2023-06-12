@@ -91,7 +91,7 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
 
 -- COMMENT
 require("nvim_comment").setup({
-    operator_mapping = "<leader>c"
+    operator_mapping = "<leader>cc"
 })
 
 -- TERMINAL SETUP

@@ -21,13 +21,13 @@ This repository is for learning to configure neovim. I would like to have an usa
 | \<leader>ff         | Find Files         | Find files by name within the folder |
 | \<leader>ft         | Find Text          | Find in files                        |
 | \<leader>tt         | Toggle Terminal    | Switch between neovim and terminal   |
-| \<leader>c          | Toggle Comment     | Switch commenting in and out         |
+| \<leader>cc         | Toggle Comment     | Switch commenting in and out         |
 | \<leader>uni _name_ | Find Unicode       | Find unicode char and add to file    |
 
 # Coding Commands
 | Command     | Name             | Usage                                |
 | ----------- | ---------------- | ------------------------------------ |
-| \<leader>a   | Code Action      | Open code actions menu               |
+| \<leader>a  | Code Action      | Open code actions menu               |
 | \<leader>f  | Formatting       | Format the current file              |
 | \<leader>vd | Workspace Symbol | Find workspace symbol                |
 | >e          | Next Error       | Go to next error                     |
