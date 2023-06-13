@@ -5,10 +5,31 @@ This repository is for learning to configure neovim. I would like to have an usa
 ## Structure
 
 * The plugin manager used is `paq`
-    * load new plugins by calling `:PaqInstall`
+
+## Installation
+Clone this repository into `~/.config` with `nvim` as name
+```zsh
+git clone https://github.com/koepalex/neovim-config.git nvim
+```
+
+Install package manager
+```zsh
+git clone --depth=1 https://github.com/savq/paq-nvim.git \
+    "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/pack/paqs/start/paq-nvim
+```
+
+Load the plugins
+```zsh
+nvim :PaqInstall
+```
+
+Compile coc for the machine
+```zsh
+"${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/pack/paqs/start/coc.nvim
+yarn install
+```
 
 ## Hints
-* Clone this repository into `~/.config` with `nvim` as name
 * Leader key (referenced as \<leader>) is mapped to `space`
 * After changing a config file, it need to be sourced (`:so`) or neovim restarted
 
