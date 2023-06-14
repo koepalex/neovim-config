@@ -119,8 +119,8 @@ local o = vim.o
 
 -- show line numbers
 wo.number = true
--- use .NET 7 compiler
-g.OmniSharp_server_use_net7 = 1
+-- use .NET 6 compiler
+g.OmniSharp_server_use_net6 = 1
 -- No text wrap
 opt.wrap = false
 -- disable backup files
