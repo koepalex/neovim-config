@@ -160,6 +160,8 @@ opt.clipboard=unnamed
 opt.cursorline=true
 -- show vertical line after 120chars
 opt.textwidth=120
+-- active spell checks
+vim.cmd(':setlocal spell spelllang=en_us')
 
 -- show unwanted whitespaces in red
 vim.cmd([[
