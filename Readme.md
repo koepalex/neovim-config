@@ -60,6 +60,8 @@ yarn install
 | gty         | Type             | Go to type definition of symbol      |
 | K           | Documentation    | Show (hover) documentation of symbol |
 | F2          | Rename           | Rename the symbol                    |
+| ]s          | Next Spell error | Jump to next spell error             |
+| [s          | Next Spell error | Jump to next spell error             |
 
 
 # Acknowledgement
