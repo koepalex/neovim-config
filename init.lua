@@ -119,6 +119,7 @@ local o = vim.o
 
 -- show line numbers
 wo.number = true
+wo.relativenumber = true
 -- use .NET 6 compiler
 g.OmniSharp_server_use_net6 = 1
 -- No text wrap
