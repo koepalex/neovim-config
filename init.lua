@@ -198,6 +198,14 @@ require('lazy').setup({
   {
     'akinsho/toggleterm.nvim'
   },
+  {
+    'vijaymarupudi/nvim-fzf',
+    dependencies = {
+      'junegunn/fzf',
+      'junegunn/fzf.vim'
+    },
+    build = 'require("fzf").install()'
+  },
   -- allow dotnet LSP
   {
     'OmniSharp/omnisharp-vim'
@@ -625,6 +633,26 @@ g.OmniSharp_diagnostic_exclude_paths = {
  '.nuget\\',
  '<AssemblyInfo.cs>'
 }
+
+
+-- Omnisharp key bindings
+-- :help omnisharp-vim.txt
+--if vim.bo.filetype == 'cs' then
+    vim.keymap.set('n', 'gd', ":OmniSharpGotoDefinition tabedit<CR>", {desc = "[G]oto [D]efinition"})
+    vim.keymap.set('n', '<leader>d', ":OmniSharpGotoTypeDefinition tabedit<CR>", {desc = "Goto type [D]efinition"})
+    vim.keymap.set('n', 'gi', ":OmniSharpFindImplementations<CR>", {desc = "[G]oto [I]mplementation"})
+    vim.keymap.set('n', '<leader>ps', ":OmniSharpPreviewDefinition<CR>", {desc = "[P]review definition of [S]ymbol"})
+    vim.keymap.set('n', '<leader>pi', ":OmniSharpPreviewImplementation<CR>", {desc = "[P]review [I]mplementation"})
+    vim.keymap.set('n', '<leader>fs', ":OmniSharpFindSymbol<CR>", {desc = "[F]ind [S]ymbol"})
+    vim.keymap.set('n', '<leader>ft', ":OmniSharpFindType<CR>", {desc = "[F]ind [T]ype"})
+    vim.keymap.set('n', 'gr', ":OmniSharpFindUsages<CR>", {desc = "[G]oto [R]eferences"})
+    vim.keymap.set('n', '<leader>ds', ":OmniSharpFindMembers<CR>", {desc = "[D]ocument [S]ymbols"})
+    vim.keymap.set('n', 'K', ":OmniSharpDocumentation<CR>", {desc = "Show symbol documentation"})
+    vim.keymap.set('n', '<leader>ca', ":OmniSharpGetCodeActions<CR>", {desc = "[C]ode [A]ctions"})
+    vim.keymap.set('n', '<leader>rn', ":OmniSharpRename<CR>", {desc = "[R]e[n]ame"})
+    vim.keymap.set('n', '<leader>fd', ":OmniSharpCodeFormat<CR>", {desc = "[F]ormat [D]ocument"})
+--end
+
 
 --  ALE
 -- configure ALE to use Omnisharp as linter for *.cs files
