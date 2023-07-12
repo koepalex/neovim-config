@@ -574,9 +574,17 @@ local opt = vim.opt
 local o = vim.o
 local g = vim.g
 
+-- Show line numbers
 wo.number = true
+-- Show releative line numbers
 wo.relativenumber = true
+-- use UTF-8 encoding for all files
 opt.encoding = "utf-8"
+
+-- Avoid ESC delay, set timeout for mapping delays
+o.timeoutlen = 1000
+-- Avoid ESC delay, set timeout for key code delays
+o.ttimeoutlen = 10
 
 -- Tab settings
 opt.tabstop = 4
