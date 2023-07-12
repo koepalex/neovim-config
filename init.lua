@@ -234,6 +234,10 @@ require('lazy').setup({
       'nvim-tree/nvim-web-devicons',  
     }
   },
+  -- automatically close pairs like brackets
+  {
+    'windwp/nvim-autopairs'
+  },
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
   --       These are some example plugins that I've included in the kickstart repository.
   --       Uncomment any of the lines below to enable them.
@@ -507,6 +511,9 @@ mason_lspconfig.setup_handlers {
   end,
 }
 
+-- configure auto pairs
+require('nvim-autopairs').setup()
+
 -- [[ Configure nvim-cmp ]]
 -- See `:help cmp`
 local cmp = require 'cmp'
@@ -554,6 +561,14 @@ cmp.setup {
     { name = 'luasnip' },
   },
 }
+
+local cmp_autopairs = require("nvim-autopairs.completion.cmp")
+cmp.event:on(
+  "confirm_done",
+  cmp_autopairs.on_confirm_done({
+    sh = false,
+  })
+)
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
