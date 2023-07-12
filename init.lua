@@ -238,6 +238,9 @@ require('lazy').setup({
   {
     'windwp/nvim-autopairs'
   },
+  {
+    'SirVer/ultisnips'
+  },
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
   --       These are some example plugins that I've included in the kickstart repository.
   --       Uncomment any of the lines below to enable them.
@@ -694,6 +697,17 @@ opt.scrolloff = 8
 opt.signcolumn = "yes"
 -- show vertical line after 120 chars
 opt.colorcolumn = "120"
+
+-- Enable snippet support
+g.UltiSnipsExpandTrigger="<tab>"
+-- shortcut to go to next position
+g.UltiSnipsJumpForwardTrigger="<c-j>"
+-- shortcut to go to previous position
+g.UltiSnipsJumpBackwardTrigger="<c-k>"
+-- Open snippet editor side-by-side
+g.UltiSnipsEditSplit="vertical"
+-- use Omnisharp snippets
+g.OmniSharp_want_snippet=1
 
 -- Debugger for dotnet
 -- download   https://github.com/Samsung/netcoredbg/releases/latest
