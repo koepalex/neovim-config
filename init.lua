@@ -231,15 +231,21 @@ require('lazy').setup({
     dependencies = {
       'nvim-lua/plenary.nvim',
       'nvim-telescope/telescope.nvim',
-      'nvim-tree/nvim-web-devicons',  
+      'nvim-tree/nvim-web-devicons',
     }
   },
   -- automatically close pairs like brackets
   {
     'windwp/nvim-autopairs'
   },
+  -- Snippet manager that works with Omnisharp
   {
     'SirVer/ultisnips'
+  },
+  -- using AI to save some development effort ;)
+  -- to use it run :Copilot setup and follow the steps
+  {
+    'github/copilot.vim',
   },
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
   --       These are some example plugins that I've included in the kickstart repository.
